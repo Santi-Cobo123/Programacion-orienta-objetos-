@@ -3,12 +3,19 @@ class InformacionClimatica:
     def __init__(self):
         self.temperaturas_diarias = []
 
-
     def ingresar_temperatura_diaria(self):
         """Método para ingresar la temperatura diaria."""
-        for dia in range(1, 8):
-            temperatura = float(input(f"Ingresa la temperatura del día {dia}: "))
-            self.temperaturas_diarias.append(temperatura)
+        datos_diarios = [
+            {"day": "Lunes", "temp": 64},
+            {"day": "Martes", "temp": 67},
+            {"day": "Miércoles", "temp": 69},
+            {"day": "Jueves", "temp": 71},
+            {"day": "Viernes", "temp": 74},
+            {"day": "Sábado", "temp": 77},
+            {"day": "Domingo", "temp": 80}
+        ]
+        for data in datos_diarios:
+            self.temperaturas_diarias.append(data["temp"])
 
     def calcular_promedio_semanal(self):
         """Método para calcular el promedio semanal de las temperaturas."""

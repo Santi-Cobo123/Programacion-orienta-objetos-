@@ -1,9 +1,17 @@
 def ingreso_datos_diarios():
     """Función para ingresar las temperaturas diarias."""
     temperaturas_diarias = []
-    for dia in range(1, 8):
-        temperatura = float(input(f"Ingresa la temperatura del día {dia}: "))
-        temperaturas_diarias.append(temperatura)
+    datos_diarios = [
+        {"day": "Lunes", "temp": 64},
+        {"day": "Martes", "temp": 67},
+        {"day": "Miércoles", "temp": 69},
+        {"day": "Jueves", "temp": 71},
+        {"day": "Viernes", "temp": 74},
+        {"day": "Sábado", "temp": 77},
+        {"day": "Domingo", "temp": 80}
+    ]
+    for data in datos_diarios:
+        temperaturas_diarias.append(data["temp"])
     return temperaturas_diarias
 
 def calcular_promedio_semanal(temperaturas_semanales):
@@ -19,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
